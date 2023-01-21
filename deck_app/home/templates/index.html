@@ -1,0 +1,177 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="deck, construction, maryland" />
+    <link rel="stylesheet" href="{% static 'home/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Home Page</title>
+
+    <!-- Style Swiper -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 85%;
+      }
+
+      body {
+        /* background: #eee; */
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        /* color: #000;
+        margin: 0;
+        padding: 0; */
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+        background: #f8f6ea;
+      }
+
+      .swiper-slide {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 40px 60px;
+      }
+
+      .parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .swiper-slide .title {
+        color: white;
+        font-size: 41px;
+        font-weight: 300;
+      }
+
+      .swiper-slide .text {
+        color: white;
+        /* background-color: rgba(248, 246, 234, 0.5); */
+        border-radius: 3%;
+        font-size: 18px;
+        max-width: 400px;
+        line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="{% static 'images/Flat Logo 2.png'%}"
+        alt="Logo"
+        height="150px"
+        width="400px"
+      />
+      <nav>
+        <ul class="nav_links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#">
+        <button>Contact</button>
+      </a>
+    </header>
+  </body>
+  <body>
+    <!-- Swiper -->
+    <div
+      style="
+        --swiper-navigation-color: #460f00;
+        --swiper-pagination-color: #460f00;
+      "
+      class="swiper mySwiper"
+    >
+      <div class="parallax-bg" data-swiper-parallax="-23%">
+        <img
+          src="{% static 'images/deck7.png'%}"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">About</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p>
+              At Restored Decks & Remodeling, with over 20 years of experience,
+              we specialize in bringing your home renovation dreams to life.
+              From kitchen and bathroom remodels to decking or patio improvement
+              and even whole-home renovations, our team of experienced
+              contractors is dedicated to providing top-quality craftsmanship
+              and exceptional customer service. We offer a best price guarantee,
+              ensuring that you'll receive the best deal on your home renovation
+              project. Let us help you transform your home into the space you've
+              always wanted. Contact us today to schedule a consultation.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">Services</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p>
+              As our name indicates, our core product is decks. We complement
+              our diverse deck-building skillset with a wide variety of exterior
+              amenities to enhance the comfort and enjoyment of your outdoor
+              living space. Besides decks, we specialize in patio, fence, and
+              walkway construction.<br /><br />
+              In addition to our outdoor services, we also offer a wide array of
+              contracting services for the inside of your home. Feel free to
+              contact us about inquiries regarding kitchens, bathrooms,
+              basements, and more.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">
+            Best price guarantee
+          </div>
+          <div class="text" data-swiper-parallax="-100">
+            <p>
+              We offer a best price guarantee, ensuring that you'll receive the
+              best deal on your home renovation project. We also price match
+              competing quotes to make sure you're getting the best deal
+              possible.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        speed: 600,
+        parallax: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
